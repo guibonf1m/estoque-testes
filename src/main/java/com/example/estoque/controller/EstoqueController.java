@@ -14,7 +14,7 @@ import java.util.List;
 @RequestMapping("/estoque")
 public class EstoqueController {
 
-    ProdutoService service;
+    private final ProdutoService service;
 
     public EstoqueController(ProdutoService service) {
         this.service = service;
@@ -45,8 +45,4 @@ public class EstoqueController {
         }
         return ResponseEntity.ok().body("Estoque Atualizado");
     }
-
-
-
-
 }
